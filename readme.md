@@ -1,8 +1,12 @@
-# Extraction Automatique pour l'Envoi des Mails SCI Waves and not Waves V7
+# Extraction Automatique pour l'Envoi des Mails SCI 
 
 ## Présentation
 
-Ce projet automatise le processus d'extraction et d'envoi de mails pour l'entreprise SCI, intitulé **"Waves and not Waves"**. Il s'intègre parfaitement avec l'outil IBM Cognos et facilite les tâches répétitives tout en réduisant les erreurs humaines.
+Ce projet automatise le processus d'extraction et d'envoi de mails pour les jobs SCI. Il s'intègre parfaitement avec l'outil IBM Cognos et facilite les tâches répétitives tout en réduisant les erreurs humaines.
+
+Il permet de planifier automatique le lancement des jobs qui vont extraire des rapports automatiquement selon le format demandé (excel, excel data, csv, hmtl ect..)
+
+Celui ci enverra un mail sur notre robot qui va trigger (déclencher) un fluw power automate qui va concatener les données chaque jour du WMS afin de créer une base de données.
 
 ## Fonctionnalités Principales
 
