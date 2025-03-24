@@ -10,7 +10,7 @@ Celui ci enverra un mail sur notre robot qui va trigger (déclencher) un fluw po
 
 ## Fonctionnalités Principales
 
-- **Automatisation complète** de l’extraction de données via IBM Cognos.
+- **Automatisation complète** de l’extraction de données via les rapports SCI [IBM Cognos].
 - **Authentification sécurisée** et gestion automatisée de la connexion.
 - **Interface intuitive** grâce à l'intégration de Selenium avec Edge WebDriver.
 - **Enregistrement des opérations** dans une base de données SQL Server pour le suivi des extractions.
@@ -29,7 +29,7 @@ Celui ci enverra un mail sur notre robot qui va trigger (déclencher) un fluw po
 - **WebDriver Manager**
 - **PyODBC**
 - **ConfigParser**
-- **BeautifulSoup** *(optionnel selon évolution future)*
+- **BeautifulSoup** 
 - **Pandas**
 
 ## Structure du Projet
@@ -60,22 +60,22 @@ pip install selenium pyodbc webdriver-manager configparser beautifulsoup4 pandas
 ```bash
 
 [Manhattan]
-username = votre_username
-password = votre_mot_de_passe
+username = _username
+password = _password
 link = lien_de_connexion_cognos
-server = votre_serveur_sql
-database = votre_base_de_données
-data_table = votre_table_sql
-balise_custom_content = votre_balise_custom_content
-balise_new_orga_v2 = votre_balise_new_orga_v2
-balise_fr50 = votre_balise_fr50
-balise_fr50l = votre_balise_fr50l
+server = serveur_sql
+database = base_de_données
+data_table = table_sql
+balise_custom_content = balise_custom_content
+balise_new_orga_v2 = balise_orga_
+balise_site = site_frxx
+balise_frxxl = votre_balise_frxxl
 balise_job = votre_balise_job
 
 [Transport_f]
-balise_type = votre_balise_type
-balise_name_job = votre_balise_name_job
-data_name = votre_data_name
+balise_type = _balise_type
+balise_name_job = balise_name_job
+data_name = data_name
 
 ```
 # Lancer le script
@@ -83,12 +83,12 @@ data_name = votre_data_name
 ## Exécuter la commande suivante en passant les arguments requis :
 
 ```bash
-python extraction_mail_sci.py argument1 Transport_f
+python extraction_mail_sci.py argument1 "report"
 
 ```
 
-- argument1 : premier argument (adapter à vos besoins)
-- Transport_f : paramètre spécifique selon votre cas
+- argument1 : premier argument 
+- report_SCI : paramètre spécifique 
 
 # Suivi et Logs
 
