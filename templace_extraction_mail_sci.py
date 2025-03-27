@@ -43,7 +43,7 @@ def main():
 
     #On récupère les valeurs dans la config
     config = configparser.ConfigParser()
-    config.read("\\\\frroyetec01p\\production$\\Extractions_Robots\\Envoi mail SCI\\Identifiant.ini")
+    config.read("\\\\serveur_name\\production$\\Extractions_Robots\\Envoi mail SCI\\Identifiant.ini")
     
     #user_name = os.getlogin() #obtention de la session utilisateur au format prenom.nom
 
@@ -57,8 +57,8 @@ def main():
     balise_custom_content= config.get('Manhattan', 'balise_custom_content')
     balise_new_orga_v2= config.get('Manhattan', 'balise_new_orga_v2')
     balise_type = config.get(parameter_sci, 'balise_type')
-    balise_fr50 = config.get('Manhattan', 'balise_fr50') 
-    balise_fr50l = config.get('Manhattan', 'balise_fr50l')
+    balise_site = config.get('Manhattan', 'balise_site') 
+    balise_site_local = config.get('Manhattan', 'balise_site_local')
     balise_job = config.get('Manhattan', 'balise_job')
     balise_name_job= config.get(parameter_sci, 'balise_name_job')
 
@@ -147,8 +147,8 @@ def main():
         wait.until(EC.element_to_be_clickable((By.XPATH, f"//*[contains(@class, 'ba-tileView__tile')]//div[contains(text(), '{balise_custom_content}')]"))).click()
         wait.until(EC.element_to_be_clickable((By.XPATH, f"//*[contains(@class, 'ba-tileView__tile')]//div[contains(text(), '{balise_new_orga_v2}')]"))).click()
         wait.until(EC.element_to_be_clickable((By.XPATH, f"//*[contains(@class, 'ba-tileView__tile')]//div[contains(text(), '{balise_type}')]"))).click()
-        wait.until(EC.element_to_be_clickable((By.XPATH, f"//*[contains(@class, 'ba-tileView__tile')]//div[contains(text(), '{balise_fr50}')]"))).click()
-        wait.until(EC.element_to_be_clickable((By.XPATH, f"//*[contains(@class, 'ba-tileView__tile')]//div[contains(text(), '{balise_fr50l}')]"))).click()
+        wait.until(EC.element_to_be_clickable((By.XPATH, f"//*[contains(@class, 'ba-tileView__tile')]//div[contains(text(), '{balise_site}')]"))).click()
+        wait.until(EC.element_to_be_clickable((By.XPATH, f"//*[contains(@class, 'ba-tileView__tile')]//div[contains(text(), '{balise_site_local}')]"))).click()
         wait.until(EC.element_to_be_clickable((By.XPATH, f"//*[contains(@class, 'ba-tileView__tile')]//div[contains(text(), '{balise_job}')]"))).click()
 
     
